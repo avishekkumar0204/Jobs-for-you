@@ -8,7 +8,6 @@ class Company <  ApplicationRecord
     end
 
     def validate_companies_data
-        Rails.logger.info "validate_companies_data-> #{self.inspect}"
         valid = true
         mandatory_fields = [:name]
         mandatory_fields.each do |field|
