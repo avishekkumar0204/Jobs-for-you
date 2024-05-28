@@ -1,6 +1,8 @@
 RailsAdmin.config do |config|
     config.model 'Company' do
 
+      navigation_label 'Admin'
+
       create do
         field :name do
           label "Company name"
