@@ -15,6 +15,7 @@ gem 'irb'
 
 gem 'rails_admin'
 
+gem 'spring'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"

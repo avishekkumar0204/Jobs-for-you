@@ -1,6 +1,16 @@
 RailsAdmin.config do |config|
     config.model 'Company' do
-      # Customize order and visibility of fields in the list view
+
+      create do
+        field :name do
+          label "Company name"
+        end
+        field :rating
+        field :head_quarter
+        field :founder
+        field :since
+      end
+
       list do
         field :name
         field :rating
@@ -20,7 +30,7 @@ RailsAdmin.config do |config|
   
       # Customize the show view
       show do
-        field :name
+        field :name 
         field :rating
         field :head_quarter
         field :founder
