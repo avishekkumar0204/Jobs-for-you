@@ -1,1 +1,7 @@
-<p> WIll create app here </p>
+
+<div class="container">
+    <div class="main-heading home-page-heading"> Hiring companies </div>
+    <%= render partial: "partials/list_of_companies", locals: {companies: @all_companies} %>
+<div>
+
+<%= stylesheet_link_tag "home_page", media: 'all', 'defer':true %>
