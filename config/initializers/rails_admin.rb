@@ -1,6 +1,6 @@
 RailsAdmin.config do |config|
   config.asset_source = :sprockets
-
+  config.excluded_models = ['ActiveStorage::Blob', 'ActiveStorage::Attachment', 'ActiveStorage::VariantRecord']
   ### Popular gems integration
 
   ## == Devise ==

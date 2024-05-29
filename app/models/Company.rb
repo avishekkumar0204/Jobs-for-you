@@ -14,7 +14,7 @@ class Company <  ApplicationRecord
 
     def validate_companies_data
         valid = true
-        mandatory_fields = [:name]
+        mandatory_fields = [:name, :company_image]
         mandatory_fields.each do |field|
             if self[field].blank?
                 valid = false
