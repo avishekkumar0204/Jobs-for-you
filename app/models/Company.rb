@@ -1,8 +1,8 @@
 class Company <  ApplicationRecord
-    before_save :populate_mandatory_field
 
+    has_one_attached :company_image
+    before_save :populate_mandatory_field
     validate :validate_companies_data
-    
     scope :select_columns, -> {select(:name, :rating, :head_quarter, :founder, :since)}
 
     def populate_mandatory_field

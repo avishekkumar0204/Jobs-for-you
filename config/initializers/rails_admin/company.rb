@@ -11,6 +11,9 @@ RailsAdmin.config do |config|
         field :head_quarter
         field :founder
         field :since
+        field :company_image, :active_storage do
+          label "Company Image"
+        end
       end
 
       list do
@@ -28,6 +31,9 @@ RailsAdmin.config do |config|
         field :head_quarter
         field :founder
         field :since
+        field :company_image, :active_storage do
+          label "Company Image"
+        end
       end
   
       # Customize the show view
