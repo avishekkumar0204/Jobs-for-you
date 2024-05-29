@@ -1,16 +1,23 @@
 <% companies = local_assigns[:companies] %>
 <div class="list-of-companies">
     <% companies.each do |company|%>
-        <div class="card company-card"> 
-            <div class="company-name"> <%= company.name %> </div>
-            <div class="company-rating"> 
-                <div class="company-rating-number"> <%= company.rating %> </div>
-                <div class="company-rating-icon"> <%= image_tag("icons/star.png", alt: "star", class: "star-icon") %> </div>
-            </div> 
-            <div class = "company-details">
-                <div class="company-headquarter"> <%= company.head_quarter %> </div> ,
-                <div class="company-since"> &nbsp<%= company.since %> </div> 
+        <a class="card company-card" href = <%= company.company_url %>> 
+            <div class="company-image-wrapper">
+                <% if company.company_image.attached? %>
+                    <img src="<%= url_for(company.company_image) %>" alt="<%= company.name %>" class="company-image">
+                <% end %>
             </div>
-        </div>
+            <div class="company-detail-wrapper">
+                <div class="company-name"> <%= company.name %> </div>
+                <div class="company-rating"> 
+                    <div class="company-rating-number"> <%= company.rating %> </div>
+                    <div class="company-rating-icon"> <%= image_tag("icons/star.png", alt: "star", class: "star-icon") %> </div>
+                </div> 
+                <div class = "company-details">
+                    <div class="company-headquarter"> <%= company.head_quarter %> </div> ,
+                    <div class="company-since"> &nbsp<%= company.since %> </div> 
+                </div>
+            </div>
+        </a>
     <% end %>
 </div>

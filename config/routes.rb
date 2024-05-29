@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   root "home#index"
 
+  get "/company/:name", action: :index, controller: :company
+
 end

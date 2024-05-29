@@ -3,6 +3,14 @@
 }
 .company-card{
     margin-bottom: 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .company-image{
+        height: 48px;
+        width: 56px;
+    }
     .company-name{
         font-size: 24px;
         letter-spacing: .25px;
@@ -49,6 +57,10 @@
         letter-spacing: 1.5px;
         color: #000;
         font-weight: 500;
+    }
+
+    &:hover{
+        cursor: pointer;
     }
 }
 
