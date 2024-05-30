@@ -1,0 +1,25 @@
+*{
+    font-family: system-ui;
+}
+.container{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+@media(min-width: 768px){
+    .container{
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}
+@media(min-width: 991px){
+    .container{
+        margin-left: 48px;
+        margin-right: 48px;
+    }
+}
+.for-desk{
+    display: none;
+}
+.d-none{
+    display: none;
+}
