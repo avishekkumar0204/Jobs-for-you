@@ -2,8 +2,3 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-var hamburger = document.getElementById("js-hamburger");
-
-hamburger.addEventListener("click", function(){
-    console.log("Hello");
-})
