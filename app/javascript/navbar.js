@@ -2,26 +2,29 @@
     var hamburger = document.getElementById("js-hamburger");
     var navLists = document.getElementById("js-nav-lists");
     var close = document.getElementById("js-close");
+
+    var toggleClass = function(ele, cr, ca){
+        ele.classList.remove(cr);
+        ele.classList.add(ca);
+    }
+
     var openMobileNavList = function(){
-        hamburger.classList.remove("show");
-        hamburger.classList.add("hide");
-        navLists.classList.remove("hide");
-        navLists.classList.add("show");
-        close.classList.remove("hide");
-        close.classList.add("show");
+        toggleClass(hamburger, "show", "hide");
+        toggleClass(navLists, "hide", "show");
+        toggleClass(close, "hide", "show");
     }
+
     var closeMobileNavList = function(){
-        close.classList.remove("show");
-        close.classList.add("hide");
-        navLists.classList.remove("show");
-        navLists.classList.add("hide");
-        hamburger.classList.remove("hide");
-        hamburger.classList.add("show");
+        toggleClass(close, "show", "hide");
+        toggleClass(navLists, "show", "hide");
+        toggleClass(hamburger, "hide", "show");
     }
+
     var init = function(){
         hamburger.addEventListener("click", openMobileNavList);
         close.addEventListener("click", closeMobileNavList)
     }
+    
     window.addEventListener('load', init);
 })();
 
