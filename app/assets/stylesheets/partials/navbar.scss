@@ -29,6 +29,9 @@
             cursor: pointer;
         }
     }
+    .nav-lists{
+        display: none;
+    }
     .nav-list-item{
         list-style: none;
         margin: 8px;
@@ -52,5 +55,20 @@
         top: 17px;
         right: 26px;
         font-size: 36px;
+    }
+}
+
+@media(min-width: 768px){
+    .main-navbar{
+        display: flex;
+        align-items: center;
+        .nav-hamburger{
+            display: none;
+        }
+        .nav-lists{
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+        }
     }
 }

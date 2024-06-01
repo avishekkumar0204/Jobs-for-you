@@ -22,9 +22,9 @@
 
     var init = function(){
         hamburger.addEventListener("click", openMobileNavList);
-        close.addEventListener("click", closeMobileNavList)
+        close.addEventListener("click", closeMobileNavList);
     }
-    
+
     window.addEventListener('load', init);
 })();
 
