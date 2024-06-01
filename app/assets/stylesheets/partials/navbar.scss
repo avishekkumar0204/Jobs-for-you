@@ -1,0 +1,56 @@
+.main-navbar{
+    margin: -8px;
+    background-color: #9682a987;
+    position: relative;
+    .nav{
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .show{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
+    .show-nav{
+        position: absolute;
+        top: 0;
+    }
+    .main-logo{
+        height: 56px;
+        width: 56px;
+    }
+    .nav-hamburger{
+        height: 40px;
+        width: 40px;
+        &.hover{
+            cursor: pointer;
+        }
+    }
+    .nav-list-item{
+        list-style: none;
+        margin: 8px;
+        font-size: 20px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.72);
+        font-weight: 600;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .nav-lists.show{
+        padding: 8px; 
+        padding-top: -8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .close-btn{
+        position: absolute;
+        top: 17px;
+        right: 26px;
+        font-size: 36px;
+    }
+}
